@@ -2,16 +2,19 @@
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/supabase"],
+  modules: ["@nuxtjs/supabase", "@nuxtjs/tailwindcss"],
   css: ["~/assets/css/main.css"],
   build: {
     postcss: {
       postcssOptions: {
         plugins: {
-          tailwindcss: {},
+          tailwindcss: {
+            // Options
+          },
           autoprefixer: {},
         },
       },
     },
   },
 });
+  
