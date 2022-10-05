@@ -6,7 +6,7 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
                 <li>
-                    <NuxtLink to="/about">About</NuxtLink>
+                    <NuxtLink to="/search">Search</NuxtLink>
                 </li>
                 <li tabindex="0">
                     <a>
