@@ -1,11 +1,11 @@
-export const useSearch = () => {
-  const search = ref("test");
+/* export const useSearch = () => {
+  const search = ref("");
 
   const onLoad = () => {};
 
   const onCreate = () => {
     console.log(search.value);
-    /* window.location.replace("/search"); */
+    
   };
 
   const onUpdate = () => {};
@@ -20,3 +20,5 @@ export const useSearch = () => {
     onDelete,
   };
 };
+ */
+export const useSearch = () => useState<string>("search", () => ref(""));
