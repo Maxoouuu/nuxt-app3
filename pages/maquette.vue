@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen bg-[url('/assets/img/home.jpg')] bg-center bg-cover bg-no-repeat ">
+    <div class="h-screen w-screen bg-[url('/assets/img/home-min.jpg')] bg-center bg-cover bg-no-repeat ">
 
         <theheader />
         <div class="flex h-screen justify-center items-center mx-32">
