@@ -2,7 +2,7 @@
 <!-- login form modal-->
 <loginform />
 
-  <div class="navbar bg-gradient-to-b from-white z-50 mx-auto px-10 py-4 sticky top-0"> <!-- lg:max-w-screen-lg -->
+  <div class="navbar bg-gradient-to-b from-black z-50 mx-auto px-10 py-4 sticky top-0"> <!-- lg:max-w-screen-lg -->
   <!-- navbar start -->
     <div class="navbar-start">
       <div class="dropdown">
@@ -24,14 +24,14 @@
 
       <div class="hidden lg:flex">
       <ul class="menu menu-horizontal p-0">
-        <li><NuxtLink to="/about" class="whitespace-nowrap">A propos</NuxtLink></li>
-        <li><a class="">Patients</a></li>
-        <li><a class="">Médecins</a></li>
-        <li><a class="">Promoteurs</a></li>
+        <li><NuxtLink to="/about" class="whitespace-nowrap text-white">A propos</NuxtLink></li>
+        <li><a class="text-white">Patients</a></li>
+        <li><a class="text-white">Médecins</a></li>
+        <li><a class="text-white">Promoteurs</a></li>
       </ul>
     </div>
 
-      <label for="my-login" class="ml-5 btn-sm btn btn-primary btn-outline modal-button">Se connecter</label>
+      <label for="my-login" class="text-white ml-5 btn-sm btn btn-primary btn-outline modal-button">Se connecter</label>
     </div>
 
 </div>
