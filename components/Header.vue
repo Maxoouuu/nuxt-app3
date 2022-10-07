@@ -28,6 +28,9 @@
                 <li>
                     <NuxtLink to="/formulaire">Formulaire</NuxtLink>
                 </li>
+                <li>
+                    <NuxtLink to="/maquette">Maquette</NuxtLink>
+                </li>
             </ul>
         </div>
         <div class="navbar-end">
