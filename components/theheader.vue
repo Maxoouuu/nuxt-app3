@@ -2,7 +2,7 @@
 <!-- login form modal-->
 <loginform />
 
-  <div class="navbar bg-gradient-to-b from-black z-50 mx-auto px-10 py-4 sticky top-0"> <!-- lg:max-w-screen-lg -->
+  <div class="navbar bg-gradient-to-b from-white z-50 mx-auto px-10 py-4 sticky top-0"> <!-- lg:max-w-screen-lg -->
   <!-- navbar start -->
     <div class="navbar-start">
       <div class="dropdown">
