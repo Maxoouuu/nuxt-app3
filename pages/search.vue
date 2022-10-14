@@ -1,20 +1,22 @@
 <template>
     <div>
-        <Header />
+        <div>
+            <Header />
 
-        <div class="container" style="padding: 30px 0 0 0">
-            <SearchBar /> <!-- class="max-w-lg my-8" -->
+            <div class="container" style="padding: 30px 0 0 0">
+                <SearchBar /> <!-- class="max-w-lg my-8" -->
+            </div>
         </div>
-    </div>
 
-    <div>
-        Counter: {{ counter }}
-        <button @click="counter++">
-            +
-        </button>
-        <button @click="counter--">
-            -
-        </button>
+        <div>
+            Counter: {{ counter }}
+            <button @click="counter++">
+                +
+            </button>
+            <button @click="counter--">
+                -
+            </button>
+        </div>
     </div>
 
 </template>

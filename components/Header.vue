@@ -25,31 +25,8 @@
                         </li>
                     </ul>
                 </li>
-                <li tabindex="0">
-                    <a>
-                        Test API
-                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24">
-                            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                        </svg>
-                    </a>
-                    <ul class="p-2">
-                        <li>
-                            <NuxtLink to="/count">Count</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/useLazyFetch">useLazyFetch</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/useAsyncData">useAsyncData</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/useLazyAsyncData">useLazyAsyncData</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/RefreshingData">RefreshingData</NuxtLink>
-                        </li>
-                    </ul>
+                <li>
+                    <NuxtLink to="/edit">Edit</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/formulaire">Formulaire</NuxtLink>
@@ -61,7 +38,7 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <div class="dropdown dropdown-end dropdown-hover">
+            <div class="dropdown dropdown-end dropdown-hover ">
                 <label tabindex="0" class="btn m-1">Se connecter</label>
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
