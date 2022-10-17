@@ -13,10 +13,10 @@
                 allowfullscreen></iframe>
         </div>
 
-        <!-- <div class="container" style="padding: 50px 0 100px 0">
+        <div class="container" style="padding: 50px 0 100px 0">
             <Account v-if="user" />
             <Auth v-else />
-        </div> -->
+        </div>
 
         <div>
             Counter: {{ counter }}
@@ -33,14 +33,13 @@
   
 
 <script setup>
-/* const user = useSupabaseUser(); */
-/* const { search, onCreate } = useSearch(); */
+const user = useSupabaseUser();
+
 
 /* Tests */
+/* const { search, onCreate } = useSearch(); */
 /* const foo = useFoo(); */
-
 /* export { search } from './useSearch.ts'; */
-
 /* console.log ({ search }) */
 const counter = useState('counter', () => Math.round(Math.random() * 1000))
 
