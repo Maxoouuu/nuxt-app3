@@ -9,14 +9,16 @@
                 </div>
                 <div class="sm:flex">
                     <div class="hidden sm:flex items-center sm:divide-x sm:divide-gray-100 mb-3 sm:mb-0">
+                        <!-- SearchBar -->
                         <form class="lg:pr-3" action="#" method="GET">
-                            <label for="users-search" class="sr-only">Search</label>
+                            <label for="studies-search" class="sr-only">Search</label>
                             <div class="mt-1 relative lg:w-64 xl:w-96">
-                                <input type="text" name="email" id="users-search"
+                                <input type="text" name="email" id="studies-search"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                                     placeholder="Search for studies">
                             </div>
                         </form>
+                        <!-- separator + 4 svg leftside -->
                         <div class="flex space-x-1 pl-0 sm:pl-2 mt-3 sm:mt-0">
                             <a href="#"
                                 class="text-gray-500 hover:text-gray-900 cursor-pointer p-1 hover:bg-gray-100 rounded inline-flex justify-center">
@@ -96,24 +98,42 @@
                                         </div>
                                     </th>
                                     <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Titre
+                                        TitleforPatient
                                     </th>
                                     <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Résumé
+                                        BriefSummaryFR
                                     </th>
                                     <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-                                        url Vidéo
+                                        urlvideo
                                     </th>
                                     <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Status
+                                        DetailedDescription
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        updated_at
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        OverallStatus
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        StartDate
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        CompletionDate
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        PatientDescription
+                                    </th>
+                                    <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
+                                        EnrollmentCount
                                     </th>
                                     <th scope="col" class="p-4">
                                     </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                <!-- {{< users.inline>}}
-                                    {{- range (index $.Site.Data "users") }} -->
+                                <!-- {{< studies.inline>}}
+                                    {{- range (index $.Site.Data "studies") }} -->
                                 <tr class="hover:bg-gray-100">
                                     <td class="p-4 w-4">
                                         <div class="flex items-center">
@@ -122,36 +142,37 @@
                                             <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
                                         </div>
                                     </td>
-                                    <td class="p-4 flex items-center whitespace-nowrap space-x-6 mr-12 lg:mr-0">
-                                        <img class="h-10 w-10 rounded-full" src="/images/users/{{ .avatar }}"
-                                            alt="{{ .name }} avatar">
-                                        <div class="text-sm font-normal text-gray-500">
-                                            <div class="text-base font-semibold text-gray-900">
-                                                <!-- {{ .name }} -->test
-                                            </div>
-                                            <div class="text-sm font-normal text-gray-500">
-                                                <!-- {{ .email }} -->test@gmail.com
-                                            </div>
-                                        </div>
-                                    </td>
                                     <td class="p-4 whitespace-nowrap text-base font-medium text-gray-900">
-                                        <!-- {{
-                                            .position }} -->test
-                                    </td>
-                                    <td class="p-4 whitespace-nowrap text-base font-medium text-gray-900">
-                                        <!-- {{
-                                            .country }} -->test
+                                        <!--  {{ data.TitleforPatient }}test -->
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
-                                        <div class="flex items-center">
-                                            <!-- {{ if eq .status "Active" }} -->
-                                            <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div>
-                                            <!-- {{ else }} -->
-                                            <div class="h-2.5 w-2.5 rounded-full bg-red-500 mr-2"></div>
-                                            <!-- {{ end }} -->
-                                            <!-- {{ .status }} -->
-                                        </div>
+                                        <!-- {{ data.BriefSummaryFR }} -->test
                                     </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.DetailedDescription }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.updated_at }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.OverallStatus }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.StartDate}} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.CompletionDate }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.country }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.country }} -->test
+                                    </td>
+                                    <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
+                                        <!-- {{ data.country }} -->test
+                                    </td>
+                                    <!-- Both buttons in each studies -->
                                     <td class="p-4 whitespace-nowrap space-x-2">
                                         <button type="button" data-modal-toggle="user-modal"
                                             class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2 text-center">
@@ -164,7 +185,7 @@
                                                     d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
                                                     clip-rule="evenodd"></path>
                                             </svg>
-                                            Edit studies
+                                            Edit
                                         </button>
                                         <button type="button" data-modal-toggle="delete-user-modal"
                                             class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2 text-center">
@@ -174,12 +195,12 @@
                                                     d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
                                                     clip-rule="evenodd"></path>
                                             </svg>
-                                            Delete studie
+                                            Delete
                                         </button>
                                     </td>
                                 </tr>
                                 <!--  {{ end -}}
-                                    {{< /users.inline>}} -->
+                                    {{< /studies.inline>}} -->
 
                             </tbody>
                         </table>
@@ -187,6 +208,7 @@
                 </div>
             </div>
         </div>
+        <!-- Bottom NavBar -->
         <div
             class="bg-white sticky sm:flex items-center w-full sm:justify-between bottom-0 right-0 border-t border-gray-200 p-4">
             <div class="flex items-center mb-4 sm:mb-0">
@@ -242,21 +264,39 @@
 <script setup>
 const supabase = useSupabaseClient()
 
-const loading = ref(false)
-const email = ref('')
+const loading = ref(true)
+const TitleforPatient = ref('')
+const BriefSummaryFR = ref('')
+const urlvideo = ref('')
+const DetailedDescription = ref('')
+const updated_at = ref('')
+const OverallStatus = ref('')
+const StartDate = ref('')
+const CompletionDate = ref('')
+const PatientDescription = ref('')
+const EnrollmentCount = ref('')
 
 
-const handleLogin = async () => {
-    try {
-        loading.value = true
-        const { error } = await supabase.auth.signIn({ email: email.value })
-        if (error) throw error
-        alert('Check your email for the login link!')
-    } catch (error) {
-        alert(error.error_description || error.message)
-    } finally {
-        loading.value = false
-    }
+loading.value = true
+const user = useSupabaseUser();
+let { data } = await supabase
+    .from('Studies')
+    .select(`TitleforPatient, BriefSummaryFR, urlvideo, DetailedDescription, updated_at, OverallStatus, StartDate, CompletionDate, PatientDescription, EnrollmentCount`)
+    .eq('id', user.value.id)
+    .single()
+if (data) {
+    TitleforPatient.value = data.TitleforPatient
+    BriefSummaryFR.value = data.BriefSummaryFR
+    urlvideo.value = data.urlvideo
+    DetailedDescription.value = data.DetailedDescription
+    updated_at.value = data.updated_at
+    OverallStatus.value = data.OverallStatus
+    StartDate.value = data.StartDate
+    CompletionDate.value = data.CompletionDate
+    PatientDescription.value = data.PatientDescription
+    EnrollmentCount.value = data.EnrollmentCount
 }
+loading.value = false
+
 </script>
 

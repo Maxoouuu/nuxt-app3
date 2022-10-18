@@ -29,7 +29,7 @@
                     <NuxtLink to="/edit">Edit</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/formulaire">Formulaire</NuxtLink>
+                    <NuxtLink to="/edittest">Edit Test</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="/maquette">Maquette</NuxtLink>
