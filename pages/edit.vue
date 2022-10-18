@@ -140,15 +140,14 @@
                                 <tr class="hover:bg-gray-100">
                                     <td class="p-4 w-4">
                                         <div class="flex items-center">
-                                            <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox"
-                                                class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-cyan-200 h-4 w-4 rounded">
-                                            <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
+                                            <input id="checkbox-idVariable" aria-describedby="checkbox-1" type="checkbox"
+                                                class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-cyan-200 h-4 w-4 rounded"><!-- checkbox-{{ id }} -->
+                                            <label for="checkbox-idVariable" class="sr-only">checkbox</label> <!-- checkbox-{{ id }} -->
                                         </div>
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-medium text-gray-900">
-                                        <!--  {{ data.TitleforPatient }}test -->
-
-                                        <input v-model="TitleforPatient" type="text" />
+                                        <!--  {{ data.TitleforPatient }} --> test
+                                        <!-- <input  type="text" v-model="TitleforPatient"/> -->
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
                                         <!-- {{ data.BriefSummaryFR }} -->test
