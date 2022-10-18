@@ -147,7 +147,7 @@
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-medium text-gray-900">
                                         <!--  {{ data.TitleforPatient }}test -->
-                                        
+
                                         <input v-model="TitleforPatient" type="text" />
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
@@ -262,33 +262,6 @@
         </div>
 
 
-        <form class="form-widget" @submit.prevent="updateProfile">
-        <Avatar v-model:path="avatar_path" @upload="updateProfile" />
-        <div>
-            <label for="email">Email</label>
-            <input id="email" type="text" :value="user.email" disabled />
-        </div>
-        <div>
-            <label for="TitleforPatient">Name</label>
-            <input id="TitleforPatient" type="text" v-model="TitleforPatient" />
-        </div>
-        <div>
-            <label for="website">Website</label>
-            <input id="website" type="website" v-model="website" />
-        </div>
-
-        <div>
-            <input type="submit" class="block button primary" :value="loading ? 'Loading ...' : 'Update'"
-                :disabled="loading" />
-        </div>
-
-        <div>
-            <button class="block button" @click="signOut" :disabled="loading">
-                Sign Out
-            </button>
-        </div>
-    </form>
-
     </div>
 </template>
 
@@ -348,7 +321,7 @@ async function updateProfile() {
             CompletionDate: CompletionDate.value,
             PatientDescription: PatientDescription.value,
             EnrollmentCount: EnrollmentCount.value,
-          
+
         }
         let { error } = await supabase.from('Studies').upsert(updates, {
             returning: 'minimal', // Don't return the value after inserting
