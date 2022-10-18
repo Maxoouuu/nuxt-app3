@@ -5,7 +5,7 @@
         <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
             <div class="mb-1 w-full">
                 <div class="mb-4">
-                    <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">All users</h1>
+                    <h1 class="text-xl sm:text-2xl font-semibold text-gray-900">Toutes les études</h1>
                 </div>
                 <div class="sm:flex">
                     <div class="hidden sm:flex items-center sm:divide-x sm:divide-gray-100 mb-3 sm:mb-0">
@@ -14,7 +14,7 @@
                             <div class="mt-1 relative lg:w-64 xl:w-96">
                                 <input type="text" name="email" id="users-search"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                                    placeholder="Search for users">
+                                    placeholder="Search for studies">
                             </div>
                         </form>
                         <div class="flex space-x-1 pl-0 sm:pl-2 mt-3 sm:mt-0">
@@ -124,7 +124,7 @@
                                     </td>
                                     <td class="p-4 flex items-center whitespace-nowrap space-x-6 mr-12 lg:mr-0">
                                         <img class="h-10 w-10 rounded-full" src="/images/users/{{ .avatar }}"
-                                            alt="{{ .name }} avatar">   
+                                            alt="{{ .name }} avatar">
                                         <div class="text-sm font-normal text-gray-500">
                                             <div class="text-base font-semibold text-gray-900">
                                                 <!-- {{ .name }} -->test
@@ -237,3 +237,26 @@
 
     </div>
 </template>
+
+
+<script setup>
+const supabase = useSupabaseClient()
+
+const loading = ref(false)
+const email = ref('')
+
+
+const handleLogin = async () => {
+    try {
+        loading.value = true
+        const { error } = await supabase.auth.signIn({ email: email.value })
+        if (error) throw error
+        alert('Check your email for the login link!')
+    } catch (error) {
+        alert(error.error_description || error.message)
+    } finally {
+        loading.value = false
+    }
+}
+</script>
+
