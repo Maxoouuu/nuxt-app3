@@ -140,13 +140,16 @@
                                 <tr class="hover:bg-gray-100">
                                     <td class="p-4 w-4">
                                         <div class="flex items-center">
-                                            <input id="checkbox-idVariable" aria-describedby="checkbox-1" type="checkbox"
-                                                class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-cyan-200 h-4 w-4 rounded"><!-- checkbox-{{ id }} -->
-                                            <label for="checkbox-idVariable" class="sr-only">checkbox</label> <!-- checkbox-{{ id }} -->
+                                            <input id="checkbox-idVariable" aria-describedby="checkbox-1"
+                                                type="checkbox"
+                                                class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-cyan-200 h-4 w-4 rounded">
+                                            <!-- checkbox-{{ id }} -->
+                                            <label for="checkbox-idVariable" class="sr-only">checkbox</label>
+                                            <!-- checkbox-{{ id }} -->
                                         </div>
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-medium text-gray-900">
-                                        <!--  {{ data.TitleforPatient }} --> test
+                                        <!-- {{ Study.TitleforPatient }} -->
                                         <!-- <input  type="text" v-model="TitleforPatient"/> -->
                                     </td>
                                     <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
@@ -260,77 +263,84 @@
             </div>
         </div>
 
+        <div class="my-6">
+            <form action="" class="form">
+                <input type="text" name="Titleforpatient" placeholder="username">
+                <input type="text" name="test2" placeholder="autre">
+                <input type="checkbox" name="test3">
+
+                <button type="submit"></button>
+            </form>
+        </div>
 
     </div>
 </template>
 
 
 <script setup>
+
+/* const Study = [{ label: 'the label', value: 'the value' }] */
+
+let study= { 'ntcid': '3',
+'Titleforpatient': 'titre de étude'}
+
+let criteria= [{}, {}]
+
+let studies = [
+  {
+    "Titleforpatient": "Titre exemple 1",
+    "ntcid": 3,
+    "criteria": [
+      "critère 1",
+      "critère 2",
+      "critère 3"
+    ]
+  },
+  {
+    "Titleforpatient": "Titre exemple 2",
+    "ntcid": 4,
+    "criteria": [
+      "critère 1",
+      "critère 2",
+      "critère 3"
+    ]
+  }
+]
+
+
+/* const formEl = document.querySelector('.form')
+
+formEl.addEventListener('submit', event => {
+    event.preventDefault()
+
+    const formData = new FormData(FormEl)
+    console.log(formData.get('username')) */
+
+
 const supabase = useSupabaseClient()
 
 const loading = ref(true)
 
-const TitleforPatient = ref('')
-const BriefSummaryFR = ref('')
-const urlvideo = ref('')
-const DetailedDescription = ref('')
-const updated_at = ref('')
-const OverallStatus = ref('')
-const StartDate = ref('')
-const CompletionDate = ref('')
-const PatientDescription = ref('')
-const EnrollmentCount = ref('')
-
+const Study = ref([])
 
 loading.value = true
-const user = useSupabaseUser();
+
 
 let { data } = await supabase
-    .from('Studies')
-    .select(`TitleforPatient, BriefSummaryFR, urlvideo, DetailedDescription, updated_at, OverallStatus, StartDate, CompletionDate, PatientDescription, EnrollmentCount`)
-    .eq('id', user.value.id)
+    .from('profiles')
+    .select(`username, BriefSummaryFR, urlvideo, DetailedDescription, updated_at, OverallStatus, StartDate, CompletionDate, PatientDescription, EnrollmentCount`)
     .single()
 if (data) {
-    TitleforPatient.value = data.TitleforPatient
-    BriefSummaryFR.value = data.BriefSummaryFR
-    urlvideo.value = data.urlvideo
-    DetailedDescription.value = data.DetailedDescription
-    updated_at.value = data.updated_at
-    OverallStatus.value = data.OverallStatus
-    StartDate.value = data.StartDate
-    CompletionDate.value = data.CompletionDate
-    PatientDescription.value = data.PatientDescription
-    EnrollmentCount.value = data.EnrollmentCount
+    Study.value = data
+
 }
 loading.value = false
 
-async function updateProfile() {
-    try {
-        loading.value = true
-        const user = useSupabaseUser();
-        const updates = {
-            id: user.value.id,
-            TitleforPatient: TitleforPatient.value,
-            BriefSummaryFR: BriefSummaryFR.value,
-            urlvideo: urlvideo.value,
-            DetailedDescription: DetailedDescription.value,
-            updated_at: new Date(),
-            OverallStatus: OverallStatus.value,
-            StartDate: new Date(),
-            CompletionDate: CompletionDate.value,
-            PatientDescription: PatientDescription.value,
-            EnrollmentCount: EnrollmentCount.value,
 
-        }
-        let { error } = await supabase.from('Studies').upsert(updates, {
-            returning: 'minimal', // Don't return the value after inserting
-        })
-        if (error) throw error
-    } catch (error) {
-        alert(error.message)
-    } finally {
-        loading.value = false
-    }
-}
+
+
+
 
 </script>
+
+<!-- Une étude  et dtudy criteria avec 2 entré-->
