@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/supabase", "@nuxtjs/tailwindcss", "@nuxt/image-edge"],
+  /* plugins: ["~plugins/geolib.ts"], */
   css: ["~/assets/css/main.css"],
   build: {
     postcss: {

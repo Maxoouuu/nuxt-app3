@@ -28,12 +28,19 @@
             </button>
         </div>
 
+        <ShareNetwork network="facebook" url="https://news.vuejs.org/issues/180"
+            title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
+            description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
+            quote="The hot reload is so fast it\'s near instant. - Evan You" hashtags="vuejs,vite">
+            Share on Facebook
+        </ShareNetwork>
+
     </div>
 </template>
   
 
-<script setup>
-const user = useSupabaseUser();
+<script >
+/* const user = useSupabaseUser(); */
 
 
 /* Tests */
@@ -41,6 +48,7 @@ const user = useSupabaseUser();
 /* const foo = useFoo(); */
 /* export { search } from './useSearch.ts'; */
 /* console.log ({ search }) */
-const counter = useState('counter', () => Math.round(Math.random() * 1000))
+/* const counter = useState('counter', () => Math.round(Math.random() * 1000)) */
+
 
 </script>
