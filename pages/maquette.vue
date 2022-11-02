@@ -29,22 +29,4 @@
 
 <script setup>
 
-let images = ref(['/assets/img/1-home.jpeg',
-    '/assets/img/2-home.jpeg',
-    '/assets/img/3-home-4.jpeg',
-    '/assets/img/4-home.jpeg'
-])
-
-let indeximg = 0
-
-function changeImage() {
-    if (indeximg === images.value.length) {
-        indeximg = 0;
-    }
-    image.value = images.value[indeximg];
-    indeximg++;
-}
-
-setInterval(changeImage, 5000);
-
 </script>
