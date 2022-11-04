@@ -1,5 +1,7 @@
 /* import { defineNuxtConfig } from "nuxt"; */
 
+
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
@@ -17,7 +19,8 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico?v2" }],
     },
   },
-  modules: ["@nuxtjs/supabase", "@nuxtjs/tailwindcss", "@nuxt/image-edge"],
+ 
+  modules: ["@nuxtjs/supabase", "@nuxtjs/tailwindcss", "@nuxt/image-edge",],
   /* plugins: ["~plugins/geolib.ts"], */
   css: ["~/assets/css/main.css"],
   build: {
