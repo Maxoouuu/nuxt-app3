@@ -18,25 +18,25 @@
 
 const team = ref([
     {
-        image: "/assets/img/alexis.jpg",
+        image: "/assets/img/alexis.jpg?nf_resize=fit&w=300&h=400",
         name: "Alexis Bourla",
         title: "CEO",
         profession: "Psychiatre",
     },
     {
-        image: "/assets/img/alexis.jpg",
+        image: "/assets/img/alexis.jpg?nf_resize=fit&w=300&h=400",
         name: "Jean-François Ramadier",
         title: "CTO",
         profession: "Ingénieur en IA",
     },
     {
-        image: "/assets/img/alexis.jpg",
+        image: "/assets/img/alexis.jpg?nf_resize=fit&w=300&h=400",
         name: "Redwan Maatoug",
         title: "Scientific advisor",
         profession: "Psychiatre et chercheur en neurosciences",
     },
     {
-        image: "/assets/img/alexis.jpg",
+        image: "/assets/img/alexis.jpg?nf_resize=fit&w=300&h=400",
         name: "Michel Gennaoui",
         title: "Scientific director",
         profession: "Nephrologue",
