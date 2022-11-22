@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
-    "@nuxtjs/supabase": "^0.1.27",
+    "@nuxtjs/supabase": "^0.2.2",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.12",

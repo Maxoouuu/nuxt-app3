@@ -281,7 +281,7 @@
 
 /* const Study = [{ label: 'the label', value: 'the value' }] */
 
-let study= { 'ntcid': '3',
+/* let study= { 'ntcid': '3',
 'Titleforpatient': 'titre de étude'}
 
 let criteria= [{}, {}]
@@ -306,7 +306,7 @@ let studies = [
     ]
   }
 ]
-
+ */
 
 /* const formEl = document.querySelector('.form')
 
@@ -316,7 +316,7 @@ formEl.addEventListener('submit', event => {
     const formData = new FormData(FormEl)
     console.log(formData.get('username')) */
 
-
+/* 
 const supabase = useSupabaseClient()
 
 const loading = ref(true)
@@ -334,7 +334,7 @@ if (data) {
     Study.value = data
 
 }
-loading.value = false
+loading.value = false */
 
 
 

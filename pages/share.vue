@@ -1,75 +1,21 @@
-<template>
+<!-- <template>
+  <div>
+    <a
+      href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+      class="twitter-share-button"
+      data-text="Hi, i think that ..."
+      data-url="https://brilliant-cuchufli-cf7087.netlify.app/studies/NCT03758105"
+      data-via="username"
+      data-hashtags="hashtag"
+      data-related="username2,username3"
+      data-show-count="false"
+      >Tweet</a
+    >
 
-    <span v-html="tweetButton" />
-
-    <A HREF="mailto:san@antonio.net
-?subject=Notre affaire
-&cc=partenaire@antonio.net
-&bcc=avocat@antonio.net
-&body=Bonjour">san@antonio.net</A>
-
-    <a href="https://www.facebook.com/intent/">facebook</a>
-
-
+  </div>
 </template>
 
 <script>
-
-export default {
-    data() {
-        return {
-            tweetButton: '',
-            twttr: {}
-        }
-    },
-    props: {
-        shareLink: String
-    },
-    mounted() {
-        this.renderTweetButton()
-    },
-    methods: {
-        renderTweetButton() {
-
-            this.tweetButton = `<a
-        class="twitter-share-button"
-        data-via="Example"
-        data-size="large"
-        url="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Ffr%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw0H8SWfI_DAbfQk86eaSubl&ust=1667646707645000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPDZqJ6ylPsCFQAAAAAdAAAAABAE"
-        data-text="Check this out!"
-        data-url="https://mywebsite.com/${this.shareLink}"
-        href="https://twitter.com/intent/tweet">
-      Tweet<img :src"/assets/img/alexis.png"></img></a>`
-
-            this.twttr = (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-
-                t._e = [];
-                t.ready = function (f) {
-                    t._e.push(f);
-                };
-
-                return t;
-            }(document, "script", "twitter-wjs"));
-        }
-    },
-    watch: {
-        shareLink() {
-            this.renderTweetButton()
-            this.twttr.widgets.load()
-        }
-    }
-}
+const { twitter } = await useFetch(`https://platform.twitter.com/widgets.js`);
 </script>
-
-<style lang="sass" scoped>
-</style>
-
-
-
+ -->
