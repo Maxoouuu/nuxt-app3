@@ -33,8 +33,8 @@
         <label class="label">
             <span class="label-text">Titre de l'étude pour le patient</span>
         </label>
-        <textarea type="text" v-model="study.TitleforPatient" :placeholder="study.BriefTitle"
-            class="input input-bordered w-full" />
+        <!-- <textarea type="text" v-model="study.TitleforPatient" :placeholder="study.BriefTitle"
+            class="input input-bordered w-full" /> -->
 
     </div>
 </template>
