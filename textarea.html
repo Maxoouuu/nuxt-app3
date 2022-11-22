@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea
+      form="billsave"
+      class="form-control input-sm ftype feet"
+      rows="1"
+      id="fee1"
+      name="feetype"
+      oninput="auto_grow(this)"
+      required
+    ></textarea>
+
+    <script>
+      document.getElementById("fee1").value = "text";
+
+      function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = element.scrollHeight + "px";
+      }
+    </script>
+  </body>
+</html>
