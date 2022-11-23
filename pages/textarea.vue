@@ -1,5 +1,6 @@
 <template>
   <textarea @focus="auto_grow(this)"></textarea>
+  <textarea @focus="auto_grow(this)" @blur="auto_grow(this)"></textarea>
 </template>
 
 <script setup>
